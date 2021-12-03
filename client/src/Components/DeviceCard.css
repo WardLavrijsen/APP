@@ -1,0 +1,54 @@
+.device-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  width: 85%;
+  margin: 10px 10px;
+  height: 80px;
+  margin: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.block {
+  height: 100%;
+  width: 30px;
+  transform: scale(300%);
+  margin-right: 40px;
+}
+
+.device-button {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.power-icon {
+  font-size: 2rem;
+  margin-left: 10px;
+  margin-right: 40px;
+}
+
+.device-name {
+  font-weight: 600;
+  font-size: 1.3rem;
+  max-width: 220px;
+}
+
+.power-card {
+  padding: 5px 10px;
+  border-radius: 26px;
+  margin-left: auto;
+}
+
+.power-data-label {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}

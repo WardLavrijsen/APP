@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PMU</title>
+    <link rel="stylesheet" href="./api-info/style.css" />
+  </head>
+  <body>
+    <h1>Welcome to the official PMU API</h1>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>API Endpoint</th>
+        <th>Body</th>
+        <th>Headers</th>
+        <th>Response</th>
+        <th>Link</th>
+        <th>Full</th>
+      </tr>
+      <tr>
+        <td>Get All User Data</td>
+        <td>GET</td>
+        <td>/getuserdata</td>
+        <td>None</td>
+        <td>authorization: Bearer {token}</td>
+        <td>User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/getuserdata" class="copybutton"
+            ><img data-link="/api/getuserdata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/getuserdata" class="copybuttonfull"
+            ><img data-link="/api/getuserdata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Login</td>
+        <td>POST</td>
+        <td>/login</td>
+        <td>email, password</td>
+        <td>None</td>
+        <td>Token, User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/login" class="copybutton"
+            ><img data-link="/api/login" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/login" class="copybuttonfull"
+            ><img data-link="/api/login" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Sign Up</td>
+        <td>POST</td>
+        <td>/signup</td>
+        <td>email, password, passwordConfirm, energyprice (optioneel)</td>
+        <td>None</td>
+        <td>Token, User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/signup" class="copybutton"
+            ><img data-link="/api/signup" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/ignup" class="copybuttonfull"
+            ><img data-link="/api/signup" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Forgot Password</td>
+        <td>POST</td>
+        <td>/forgotpassword</td>
+        <td>email</td>
+        <td>None</td>
+        <td>Send Email To User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/forgotpassword" class="copybutton"
+            ><img
+              data-link="/api/forgotpassword"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/forgotpassword" class="copybuttonfull"
+            ><img
+              data-link="/api/forgotpassword"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Change Energy Price</td>
+        <td>PATCH</td>
+        <td>/changeprice</td>
+        <td>energyprice</td>
+        <td>authorization: Bearer {token}</td>
+        <td>Token, User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/changeprice" class="copybutton"
+            ><img data-link="/api/changeprice" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/changeprice" class="copybuttonfull"
+            ><img data-link="/api/changeprice" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Add Device To A User</td>
+        <td>POST</td>
+        <td>/adddevice</td>
+        <td>id, name, catagory</td>
+        <td>authorization: Bearer {token}</td>
+        <td>Devices From A Specific User</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/adddevice" class="copybutton"
+            ><img data-link="/api/adddevice" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/adddevice" class="copybuttonfull"
+            ><img data-link="/api/adddevice" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Add Current Data To A Device</td>
+        <td>POST</td>
+        <td>/adddata</td>
+        <td>id, power</td>
+        <td>None</td>
+        <td>id, power</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/adddata" class="copybutton"
+            ><img data-link="/api/adddata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/adddata" class="copybuttonfull"
+            ><img data-link="/api/adddata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+    </table>
+  </body>
+  <script src="./api-info/script.js"></script>
+</html>
