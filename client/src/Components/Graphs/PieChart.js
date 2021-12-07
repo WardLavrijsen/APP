@@ -5,7 +5,11 @@ import { ResponsivePie } from "@nivo/pie";
 const PieChart = function (props) {
   let totalpower;
   if (props.data !== []) {
-    totalpower = props.data.reduce((total, device) => total + device.value, 0);
+    totalpower = props.data.reduce(
+      (total, device) =>
+        total + (device.value === "No Data" ? 0 : device.value),
+      0
+    );
   }
   return (
     <div className="piegraph">

@@ -2,20 +2,18 @@ import React from "react";
 import "./RangeBar.css";
 import { ResponsiveBullet } from "@nivo/bullet";
 
-const data = [
-  {
-    id: "",
-    ranges: [20, 40, 70, 100],
-    measures: [0],
-    markers: [62],
-  },
-];
-
-const RangeBar = function () {
+const RangeBar = function (props) {
   return (
     <div className="range-bar">
       <ResponsiveBullet
-        data={data}
+        data={[
+          {
+            id: "",
+            ranges: [20, 40, 70, 100],
+            measures: [0],
+            markers: [props.marker],
+          },
+        ]}
         margin={{ top: 50, right: 90, bottom: 50, left: 90 }}
         spacing={42}
         titlePosition="after"
@@ -32,3 +30,19 @@ const RangeBar = function () {
 };
 
 export default RangeBar;
+
+class Persoon {
+  cijfer;
+  constructor(naam, leeftijd, adres) {
+    this.naam = naam;
+    this.leeftijd = leeftijd;
+    this.adres = adres;
+    this.id = Math.random(0, 1);
+  }
+  voorstellen() {
+    console.log(`hoi ik ben ${this.naam} en ik ben ${this.leeftijd} jaar oud.`);
+  }
+}
+
+const Jorn = new Persoon("Jorn", 19, "hier");
+Jorn.voorstellen();

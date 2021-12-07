@@ -102,7 +102,7 @@ exports.adddevice = async function (req, res) {
       {
         devices: [
           ...currentUser.devices,
-          { id, name, catagory, archive: [], relaypower: 1 },
+          { id, name, catagory, archive: [], relaypower: 1, efficiency: 0 },
         ],
       },
       { runValidators: false, new: true }

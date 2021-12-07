@@ -2,6 +2,7 @@ import "./App.css";
 import LineGraph from "./Components/Graphs/LineGraph";
 import PieChart from "./Components/Graphs/PieChart";
 import GetData from "./Utils/apiHandler";
+import Header from "./Components/Header";
 import GeneralInfo from "./Components/GeneralInfo";
 import { useEffect, useState } from "react";
 import Devices from "./Components/Graphs/Devices";
@@ -27,7 +28,9 @@ function App() {
           })}
         />
       </div>
-      <div className="Header"></div>
+      <div className="Header">
+        <Header />
+      </div>
       <div className="Time-Selector"></div>
       <div className="General-Info">
         <GeneralInfo />

@@ -1,0 +1,144 @@
+{
+  "_id": { "$oid": "61a6341636016cf000788561" },
+  "email": "data@pmu.com",
+  "password": "$2a$10$z5KWrU3J75ZYKPn1Y3ASTOr2f4lDOeMp62HfaPWNGMXsg4PlzGMee",
+  "devices": [
+    {
+      "id": "pmu:sdfsdafeifhjsdiaje36dsfg:pmu",
+      "name": "Koelkast Beneden",
+      "catagory": 4,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:30:12.595Z" }, "power": 452 },
+        { "date": { "$date": "2021-11-30T14:30:16.490Z" }, "power": 546 },
+        { "date": { "$date": "2021-11-30T14:30:19.112Z" }, "power": 823 },
+        { "date": { "$date": "2021-11-30T14:30:21.172Z" }, "power": 34 },
+        { "date": { "$date": "2021-11-30T14:30:23.463Z" }, "power": 344 },
+        { "date": { "$date": "2021-11-30T14:30:27.805Z" }, "power": 334 },
+        { "date": { "$date": "2021-11-30T14:30:33.498Z" }, "power": 784 },
+        { "date": { "$date": "2021-11-30T14:30:53.605Z" }, "power": 352 }
+      ],
+      "relaypower": 1
+    },
+    {
+      "id": "pmu:sdfrgfgsdfdhjsdiaje36dsfg:pmu",
+      "name": "Frituurpan",
+      "catagory": 1,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:34:34.549Z" }, "power": 435 },
+        { "date": { "$date": "2021-11-30T14:34:38.312Z" }, "power": 437 },
+        { "date": { "$date": "2021-11-30T14:34:40.864Z" }, "power": 2467 },
+        { "date": { "$date": "2021-11-30T14:34:50.224Z" }, "power": 468 },
+        { "date": { "$date": "2021-11-30T14:34:55.675Z" }, "power": 235 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:sdfrgfg346gfdsjedfe36dsfg:pmu",
+      "name": "Pc Henk",
+      "catagory": 3,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:35:45.601Z" }, "power": 632 },
+        { "date": { "$date": "2021-11-30T14:35:48.560Z" }, "power": 572 },
+        { "date": { "$date": "2021-11-30T14:35:50.525Z" }, "power": 346 },
+        { "date": { "$date": "2021-11-30T14:35:53.777Z" }, "power": 547 },
+        { "date": { "$date": "2021-11-30T14:35:56.379Z" }, "power": 235 },
+        { "date": { "$date": "2021-11-30T14:35:59.487Z" }, "power": 654 },
+        { "date": { "$date": "2021-11-30T14:36:02.644Z" }, "power": 345 },
+        { "date": { "$date": "2021-11-30T14:36:04.934Z" }, "power": 567 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:sdf4feg4457dsf36dsfg:pmu",
+      "name": "Wasmachine",
+      "catagory": 2,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:37:45.317Z" }, "power": 213 },
+        { "date": { "$date": "2021-11-30T14:37:47.528Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:37:51.282Z" }, "power": 345 },
+        { "date": { "$date": "2021-11-30T14:37:53.400Z" }, "power": 324 },
+        { "date": { "$date": "2021-11-30T14:37:55.481Z" }, "power": 123 },
+        { "date": { "$date": "2021-11-30T14:37:57.758Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:38:00.659Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:38:02.792Z" }, "power": 432 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:sdfsadkjo4s457dsf36dsfg:pmu",
+      "name": "Koelkast Zuipschuur",
+      "catagory": 4,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:39:01.691Z" }, "power": 435 },
+        { "date": { "$date": "2021-11-30T14:39:03.774Z" }, "power": 463 },
+        { "date": { "$date": "2021-11-30T14:39:06.364Z" }, "power": 865 },
+        { "date": { "$date": "2021-11-30T14:39:08.939Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:39:11.074Z" }, "power": 436 },
+        { "date": { "$date": "2021-11-30T14:39:13.439Z" }, "power": 457 },
+        { "date": { "$date": "2021-11-30T14:39:15.879Z" }, "power": 234 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:sdsdgrg4s457dsf36dsfg:pmu",
+      "name": "Koelkast Kamer Henk",
+      "catagory": 4,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:40:29.512Z" }, "power": 435 },
+        { "date": { "$date": "2021-11-30T14:40:32.723Z" }, "power": 146 },
+        { "date": { "$date": "2021-11-30T14:40:35.999Z" }, "power": 346 },
+        { "date": { "$date": "2021-11-30T14:40:38.972Z" }, "power": 2445 },
+        { "date": { "$date": "2021-11-30T14:40:41.213Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:40:54.163Z" }, "power": 234 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:dfdsgdsfe46rg5:pmu",
+      "name": "Koelkast Kamer Janus",
+      "catagory": 4,
+      "archive": [
+        { "date": { "$date": "2021-11-30T14:41:26.107Z" }, "power": 1243 },
+        { "date": { "$date": "2021-11-30T14:41:28.450Z" }, "power": 453 },
+        { "date": { "$date": "2021-11-30T14:41:31.697Z" }, "power": 234 },
+        { "date": { "$date": "2021-11-30T14:41:34.573Z" }, "power": 567 },
+        { "date": { "$date": "2021-11-30T14:41:36.856Z" }, "power": 345 },
+        { "date": { "$date": "2021-11-30T14:41:39.589Z" }, "power": 964 },
+        { "date": { "$date": "2021-11-30T14:41:42.020Z" }, "power": 345 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:dfdsgdser9eur94gfe46rg5:pmu",
+      "name": "Doner Spies",
+      "catagory": 4,
+      "archive": [
+        { "date": { "$date": "2021-12-01T09:53:17.224Z" }, "power": 3434 },
+        { "date": { "$date": "2021-12-01T09:53:19.731Z" }, "power": 4634 },
+        { "date": { "$date": "2021-12-01T09:53:22.357Z" }, "power": 3466 },
+        { "date": { "$date": "2021-12-01T09:53:24.848Z" }, "power": 2356 },
+        { "date": { "$date": "2021-12-01T09:53:27.005Z" }, "power": 6743 },
+        { "date": { "$date": "2021-12-01T09:53:30.946Z" }, "power": 2354 },
+        { "date": { "$date": "2021-12-01T09:53:35.481Z" }, "power": 1234 },
+        { "date": { "$date": "2021-12-01T09:53:42.021Z" }, "power": 1227 }
+      ],
+      "relaypower": 1,
+      "efficiency": 0
+    },
+    {
+      "id": "pmu:o87f68478f5747hjd:pmu",
+      "name": "Test",
+      "catagory": "1",
+      "archive": [],
+      "relaypower": 1,
+      "efficiency": 0
+    }
+  ],
+  "__v": 60
+}

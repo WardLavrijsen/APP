@@ -1,0 +1,468 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+body {
+  font-family: montserrat;
+}
+.logo {
+  width: auto;
+  height: 100%;
+  float: left;
+  margin-left: 2%;
+  display: flex;
+}
+nav {
+  background: rgb(82, 175, 63);
+  height: 5.5vw;
+  width: 100%;
+  z-index: 100;
+  /* position: fixed; */
+}
+label.logo {
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 2%;
+  font-weight: bold;
+}
+nav ul {
+  float: left;
+  height: 100%;
+  margin: auto;
+  width: 100%;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 5px;
+}
+nav ul li a {
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: white;
+  font-size: 1.3vw;
+  margin-left: 10px;
+  font-family: Poppins;
+  align-items: center;
+}
+.featherIcons {
+  background-repeat: no-repeat;
+  height: 24px;
+  width: 24px;
+  background-size: contain;
+  margin-right: 5px;
+}
+.bovenBalkGroups {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+a.active,
+a:hover {
+  background: rgb(82, 175, 63);
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 3.2vw;
+  color: white;
+  float: right;
+  line-height: 6vw;
+  margin-left: auto;
+  margin-right: 5%;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+}
+
+.dashboardButton {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  background-color: rgb(236, 240, 241);
+  border-radius: 50px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+  padding-top: 0.3vw;
+  padding-bottom: 0.3vw;
+  margin-right: 30px;
+}
+.dashboardLi {
+  float: right;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.buyLi {
+  float: right;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.graphLogo {
+  background-image: url("./images/graph.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.dashboardButtonText {
+  font-size: 1.3vw;
+  font-family: poppins;
+  color: rgb(49, 101, 38);
+  padding-left: 10px;
+}
+.buyButton {
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  background-color: rgb(49, 101, 38);
+  padding-top: 0.3vw;
+  padding-bottom: 0.3vw;
+  border-radius: 50px;
+  margin-left: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+.buyLogo {
+  background-image: url("./images/buylogo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 1.5vw;
+  height: 1.5vw;
+}
+.buyButtonText {
+  font-size: 1.3vw;
+  font-family: poppins;
+  color: white;
+  padding-left: 10px;
+  white-space: nowrap;
+}
+.buttonGroup {
+  display: flex;
+  flex-direction: row;
+  float: inline-end;
+  width: 85%;
+}
+.buttonGroupLi {
+  float: right;
+  margin-top: 22px;
+}
+.invisible {
+  display: none;
+}
+
+.pmuBanner {
+  margin-left: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.learnMore {
+  display: flex;
+  margin-top: -16vw;
+  margin-left: 18%;
+  width: 15%;
+  height: 20%;
+  z-index: 2;
+}
+.whyPmu {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 72vw;
+}
+.whyPmuText {
+  font-size: 5vw;
+  font-family: poppins;
+  text-align: center;
+  padding-top: 12vw;
+  height: 22vw;
+}
+.whyPmuBalk {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.whyPmuBlok {
+  margin-inline: 5%;
+  width: 30%;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+.whyPmuCirkel {
+  display: flex;
+  width: 7vw;
+  z-index: 2;
+}
+.whyPmuCirkelBalk {
+  display: flex;
+  justify-content: center;
+  height: 7vw;
+}
+.pmuApp {
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 15vw;
+  display: flex;
+  background-size: cover;
+  margin-top: -15%;
+}
+.ondervlak {
+  display: flex;
+  flex-direction: row;
+  height: 21vw;
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.ondervlakText {
+  flex: 90%;
+  background-color: white;
+  height: 100%;
+  padding-top: 10%;
+}
+.ondervlakRand {
+  flex: 10%;
+  background-color: #52af3f;
+}
+
+.blokTextBold {
+  font-family: poppins;
+  font-size: 1.5vw;
+  margin-left: 10%;
+  top: 10px;
+}
+.blokText {
+  font-size: 1.5vw;
+  margin-left: 10%;
+  margin-right: 5%;
+  margin-top: 5%;
+  line-height: 2.5vw;
+  font-family: poppins;
+}
+.insides {
+  width: 100%;
+  height: 31vw;
+  display: flex;
+  flex-direction: row;
+  font-family: poppins;
+}
+.insidesTextBig {
+  font-size: 2.8vw;
+  margin-left: 10%;
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+.insidesText {
+  font-size: 1.4vw;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.appExample {
+  margin-top: 10%;
+  margin-left: 12%;
+  margin-right: 5%;
+  width: 70%;
+  height: auto;
+}
+.anywhere {
+  width: 100%;
+  background-color: #ecf0f1;
+  height: 31vw;
+  display: flex;
+  flex-direction: row;
+  font-family: poppins;
+}
+.vrouwOpAuto {
+  margin-top: 10%;
+  margin-left: 17%;
+  margin-right: 5%;
+  width: 70%;
+  height: auto;
+}
+.getStarted {
+  width: 100%;
+  background-color: #52af3f;
+  height: 7vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  z-index: 2;
+}
+.getStartedText {
+  color: white;
+  font-family: poppins;
+  display: flex;
+  font-size: 2.5vw;
+  margin-left: 7%;
+}
+.getStartedButton {
+  background-color: white;
+  height: 50%;
+  width: 20%;
+  border-radius: 75px;
+  color: #316526;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: poppins;
+  font-size: 1.7vw;
+  margin-left: 25%;
+}
+
+.bottomBar {
+  background-color: #34495e;
+  width: 100%;
+  height: 25vw;
+}
+.bottomUpperRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2%;
+  margin-right: 2%;
+}
+.bottomColumn1 {
+  display: flex;
+  width: 30%;
+  margin-top: 4vw;
+}
+.bottomColumn2 {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  margin-top: 4vw;
+  color: white;
+  font-family: poppins;
+  font-size: 1.6vw;
+  margin-left: 5%;
+}
+.bottomColumn3 {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  margin-top: 4vw;
+  color: white;
+  font-family: poppins;
+  font-size: 1.15vw;
+}
+.bottomColumnImg {
+  background-image: url("./images/Pmu-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 5vw;
+  height: 5vw;
+  margin-right: 1vw;
+  margin-top: 2%;
+}
+.bottomColumn1Text {
+  color: white;
+  font-family: poppins;
+  font-size: 1.7vw;
+}
+.menuGroups {
+  display: flex;
+  flex-direction: row;
+}
+.featherIconsBottom {
+  background-repeat: no-repeat;
+  height: 1.5vw;
+  width: 1.5vw;
+  background-size: contain;
+  margin-right: 5px;
+  margin-top: 1.5%;
+  color: white;
+}
+.bottomLowerRow {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-family: poppins;
+  margin-top: 2%;
+  font-size: 1.15vw;
+}
+
+/*    ----------------------------------------------------------*/
+
+@media (max-width: 1024px) {
+  .checkbtn {
+    display: block;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #2c3e50;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+    z-index: 100;
+  }
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 25px;
+  }
+  .dashboardButtonText {
+    font-size: 25px;
+  }
+  .graphLogo {
+    width: 25px;
+    height: 25px;
+  }
+  .buyButtonText {
+    font-size: 25px;
+  }
+  .buyLogo {
+    width: 25px;
+    height: 25px;
+  }
+  .buyButton {
+    padding: 5px 10px 5px 10px;
+    margin-left: 30px;
+  }
+  .dashboardButton {
+    padding: 5px 10px 5px 10px;
+    margin-left: 55px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+  .invisible {
+    line-height: 30px;
+    display: inline-block;
+  }
+  .buyLi {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+    display: none;
+  }
+  .dashboardLi {
+    display: none;
+  }
+}

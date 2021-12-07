@@ -5,6 +5,10 @@ const mongoose = require("mongoose");
 const path = require("path");
 const helmet = require("helmet");
 const cors = require("cors");
+const fs = require("fs");
+
+const jsonread = fs.readFileSync("./test.json");
+const jsondata = JSON.parse(jsonread);
 
 const app = express();
 const router = require("./apiRouter");
@@ -36,8 +40,10 @@ mongoose
 app.use("/api", router);
 
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/api-info/index.html"))
+  res.sendFile(path.join(__dirname, "public/home/index.html"))
 );
+
+app.get("/testdata", (req, res) => res.status(200).json(jsondata));
 
 // HTTPS Options
 // const options = {

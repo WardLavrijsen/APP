@@ -5,6 +5,9 @@ const Devices = function ({ devices, setCurrentDevice }) {
   return (
     <div style={{ width: "100%", height: "100%" }}>
       {devices.map((device) => {
+        // if (device.efficiency >= 0 && device.efficiency <=) {
+
+        // }
         const id = device.id;
         let power;
         if (device.archive[device.archive.length - 1]) {
