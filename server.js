@@ -5,13 +5,12 @@ const mongoose = require("mongoose");
 const path = require("path");
 const helmet = require("helmet");
 const cors = require("cors");
-const fs = require("fs");
-
-const jsonread = fs.readFileSync("./test.json");
-const jsondata = JSON.parse(jsonread);
+// const fs = require("fs");
+// const https = require("https");
 
 const app = express();
-const router = require("./apiRouter");
+const apiRouter = require("./apiRouter");
+const pageRouter = require("./pageRouter");
 
 dotenv.config({ path: "./config.env" });
 
@@ -37,13 +36,8 @@ mongoose
   })
   .then(() => console.log("Database connected succesfull!"));
 
-app.use("/api", router);
-
-app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "public/home/index.html"))
-);
-
-app.get("/testdata", (req, res) => res.status(200).json(jsondata));
+app.use("/api", apiRouter);
+app.use("/", pageRouter);
 
 // HTTPS Options
 // const options = {
@@ -57,7 +51,7 @@ app.listen(process.env.PORT || 3443, () =>
 
 // https
 //   .createServer(options, app)
-//   .listen(3443, () => console.log("listening on port 3443"));
+//   .listen(443, () => console.log("listening on port 443"));
 
 // require("greenlock-express")
 //   .init({

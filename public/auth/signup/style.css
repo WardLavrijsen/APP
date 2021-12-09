@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;800&display=swap");
+
+/* color 1 #F87617 */
+/* color 2 #F5F5F5 */
+
+* {
+  font-size: 30px;
+  box-sizing: border-box;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  font-weight: 300;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e9e0d7;
+}
+
+body {
+  display: flex;
+  flex-direction: row-reverse;
+  height: 75%;
+  width: 64%;
+  background-color: white;
+  border-radius: 10px;
+  position: relative;
+}
+
+.left-side {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 100%;
+  width: 50%;
+  border-radius: 10px;
+}
+
+.login-box {
+  width: 75%;
+}
+
+h1,
+h4 {
+  text-align: center;
+  font-size: 160%;
+  font-weight: 800;
+  margin-bottom: 60px;
+}
+
+h4 {
+  font-size: 140%;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 80%;
+}
+
+.input {
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+}
+
+.passInput {
+  width: 90%;
+}
+
+input {
+  border: none;
+  border-bottom: black 1px solid;
+  font-size: 80%;
+  margin: 10px 0;
+  width: 100%;
+}
+
+a {
+  text-align: center;
+  font-size: 60%;
+  color: rgb(34, 34, 34);
+  display: block;
+  margin-bottom: 30px;
+}
+
+.forgottext {
+  text-decoration: none;
+}
+
+.loginButton {
+  background-color: #53af3f;
+  width: 300px;
+  padding: 10px 50px;
+  color: white;
+  font-weight: 400;
+  border-radius: 50px;
+  border: none;
+}
+
+.loginbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginButton:hover {
+  background-color: #3b7d2d;
+  cursor: pointer;
+}
+
+.right-side {
+  width: 50%;
+  background-color: #53af3f;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+p {
+  margin-bottom: 60px;
+  font-size: 70%;
+  width: 75%;
+}
+
+.SignupButton {
+  background-color: white;
+  width: 280px;
+  padding: 10px 40px;
+  color: #53af3f;
+  font-weight: 400;
+  border-radius: 50px;
+  border: none;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+.SignupButton:hover {
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+.eyeIcon {
+  display: inline;
+  width: 25px;
+  opacity: 80%;
+  filter: invert(16%) sepia(2%) saturate(5%) hue-rotate(336deg) brightness(96%)
+    contrast(88%);
+}
+
+.eyeIcon:hover {
+  filter: invert(0%) sepia(100%) saturate(21%) hue-rotate(2deg) brightness(92%)
+    contrast(108%);
+  cursor: pointer;
+}
+
+.pmu-logo img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  top: 3%;
+  left: 3%;
+  filter: invert(90%) sepia(99%) saturate(0%) hue-rotate(167deg)
+    brightness(107%) contrast(100%);
+}

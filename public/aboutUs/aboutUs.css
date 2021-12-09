@@ -1,0 +1,93 @@
+* {
+  font-family: poppins;
+}
+.natuurPlaatje {
+  background-image: url("./images/Groepsfoto.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  height: 42.7vw;
+}
+.aboutPMUblok {
+  background-color: #f6f6f6;
+  width: 100%;
+  height: 33vw;
+  display: flex;
+  flex-direction: row;
+  margin-top: -0.4vw;
+  align-items: center;
+}
+.groeneStreep {
+  background-color: #52af3f;
+  height: 100%;
+  width: 14.3vw;
+}
+.aboutPMULogo {
+  background-image: url("../home/images/Pmu-logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15vw;
+  height: 15vw;
+  display: flex;
+  margin-left: 10vw;
+}
+.aboutPMUHeader {
+  font-size: 3vw;
+  margin-left: 32vw;
+}
+.aboutPMUText {
+  font-size: 1.8vw;
+  width: 65%;
+  margin-left: 17vw;
+  margin-top: 3vw;
+  word-wrap: break-word;
+}
+.cardBalk {
+  width: 95%;
+  height: 29vw;
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+  margin-left: 5%;
+  align-items: center;
+  justify-content: center;
+}
+
+.personCard {
+  display: flex;
+  width: 40%;
+  background-color: #f6f6f6;
+  height: 75%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.persoonFoto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 17vw;
+  height: 17vw;
+}
+.profielKeuze {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.8vw;
+  font-size: 2vw;
+}
+.textVak {
+  width: 40%;
+  margin-left: 2vw;
+  margin-top: 1vw;
+}
+.naam {
+  font-size: 1.6vw;
+}
+.verhaal {
+  margin-top: 1vw;
+  word-wrap: break-word;
+  font-size: 1.3vw;
+}
+.streepRechts {
+  width: 8.3%;
+  margin-left: 4.1%;
+  background-color: #52af3f;
+}

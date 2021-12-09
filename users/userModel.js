@@ -47,6 +47,7 @@ userSchema.pre("save", async function (next) {
 userSchema.pre("save", async function (next) {
   if (this.devices) return next();
   this.devices = [];
+  next();
 });
 
 userSchema.methods.correctPassword = async function (guessPass, realpass) {
