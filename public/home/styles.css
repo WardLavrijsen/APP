@@ -110,7 +110,7 @@ a:hover {
   align-items: center;
 }
 .graphLogo {
-  background-image: url("./images/graph.svg");
+  background-image: url("/home/images/graph.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.5vw;
@@ -135,7 +135,7 @@ a:hover {
   padding-right: 1vw;
 }
 .buyLogo {
-  background-image: url("./images/buylogo.svg");
+  background-image: url("/home/images/buylogo.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.5vw;
@@ -361,7 +361,7 @@ a:hover {
   font-size: 1.15vw;
 }
 .bottomColumnImg {
-  background-image: url("./images/Pmu-logo.png");
+  background-image: url("/home/images/Pmu-logo.webp");
   background-repeat: no-repeat;
   background-size: contain;
   width: 5vw;

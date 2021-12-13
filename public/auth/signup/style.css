@@ -50,10 +50,17 @@ h4 {
   font-size: 160%;
   font-weight: 800;
   margin-bottom: 60px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 h4 {
-  font-size: 140%;
+  text-align: center;
+  font-size: 160%;
+  font-weight: 800;
+  margin-bottom: 60px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 h2 {
@@ -94,11 +101,12 @@ a {
 .loginButton {
   background-color: #53af3f;
   width: 300px;
-  padding: 10px 50px;
   color: white;
   font-weight: 400;
   border-radius: 50px;
   border: none;
+  padding: 2% 5%;
+  color: white;
 }
 
 .loginbox {
@@ -132,14 +140,14 @@ p {
 
 .SignupButton {
   background-color: white;
-  width: 280px;
-  padding: 10px 40px;
   color: #53af3f;
   font-weight: 400;
   border-radius: 50px;
   border: none;
   font-size: 90%;
   text-decoration: none;
+  width: 85%;
+  padding: 2% 5%;
 }
 
 .SignupButton:hover {
@@ -169,4 +177,65 @@ p {
   left: 3%;
   filter: invert(90%) sepia(99%) saturate(0%) hue-rotate(167deg)
     brightness(107%) contrast(100%);
+}
+.passwordBox {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 1024px) {
+  * {
+    font-size: 26px;
+  }
+  body {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  * {
+    font-size: 22px;
+  }
+  body {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  html {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .right-side {
+    width: 100%;
+    margin-top: 10%;
+  }
+  h4 {
+    margin-top: 5%;
+  }
+  * {
+    font-size: 22px;
+  }
+  .login-box {
+    width: 100%;
+  }
+  .input {
+    margin-bottom: 10px;
+  }
+  h1,
+  h4 {
+    margin-bottom: 35px;
+    font-size: 110%;
+  }
+}
+@media only screen and (max-width: 325px) {
+  * {
+    font-size: 18px;
+  }
 }

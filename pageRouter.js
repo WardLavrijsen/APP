@@ -52,6 +52,12 @@ router
     res.sendFile(path.join(__dirname, "public/dashboard/index.html"))
   );
 
+router
+  .route("/manual")
+  .get((req, res) =>
+    res.sendFile(path.join(__dirname, "public/manual/index.html"))
+  );
+
 router.route("/testdata").get((req, res) => res.status(200).json(jsondata));
 
 module.exports = router;

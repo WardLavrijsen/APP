@@ -1,0 +1,123 @@
+.downloadPMUCard {
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 25vw;
+  display: flex;
+  flex-direction: column;
+}
+.step1Card {
+  font-family: poppins;
+  display: flex;
+  font-size: 2vw;
+  justify-content: center;
+  margin-top: 1.5vw;
+}
+.PMUApp {
+  background-image: url("/manual/img/pmuApp.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25vw;
+  height: 29vw;
+  margin-left: 5vw;
+  margin-top: 1.5vw;
+}
+.step1Text {
+  font-size: 1.7vw;
+  margin-top: 5.5vw;
+  font-family: poppins;
+  display: flex;
+  max-width: 45vw;
+  margin-left: 5vw;
+}
+.step2Card {
+  width: 100%;
+  height: 36vw;
+}
+.step2Header {
+  font-family: poppins;
+  font-size: 2vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5vw;
+}
+.loginScreen {
+  background-image: url("/manual/img/loginPageIphoneHighlight.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22vw;
+  height: 43vw;
+  margin-left: 5vw;
+}
+.registerScreen {
+  background-image: url("/manual/img/registerScreen.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22vw;
+  height: 43vw;
+}
+.step2Text {
+  font-family: poppins;
+  font-size: 1.6vw;
+  max-width: 30vw;
+  margin-left: 6vw;
+  margin-top: 1vw;
+}
+.step2Paragraph {
+  margin-top: 1.5vw;
+}
+.step3Card {
+  margin-top: 13vw;
+  width: 100%;
+  background-color: #f6f6f6;
+  height: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+.step3Paragraph {
+  display: flex;
+  white-space: nowrap;
+  max-width: 45vw;
+  margin-top: 1vw;
+}
+.dashboardScreen {
+  background-image: url("/manual/img/dashboardScreen.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22vw;
+  height: 43vw;
+  margin-left: 5vw;
+}
+.addDeviceScreen {
+  background-image: url("/manual/img/addDevice.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22.8vw;
+  height: 55vw;
+}
+.plusSquare {
+  background-image: url("/manual/img/plus-square.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 1.5vw;
+  width: 1.5vw;
+  margin-top: 1.5vw;
+  margin-right: 0.5vw;
+  margin-left: 0.5vw;
+}
+.homeScreenwithDevice {
+  background-image: url("/manual/img/homePage.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 22vw;
+  height: 43vw;
+  margin-left: 5vw;
+}
+.homeScreenwithOpenedDevice {
+  background-image: url("/manual/img/homeScreenWithOpenedDevice.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20vw;
+  height: 40vw;
+  margin-left: 1.6vw;
+  margin-top: 1.5vw;
+}

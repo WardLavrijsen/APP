@@ -24,7 +24,6 @@ exports.sendReset = async function (req, res) {
     try {
       await sendEmail({
         email: currentuser.email,
-        subject: "Password Reset",
         message: resetLink,
       });
 
