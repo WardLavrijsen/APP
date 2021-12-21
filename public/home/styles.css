@@ -8,7 +8,7 @@
   text-decoration: none;
 }
 body {
-  font-family: montserrat;
+  font-family: poppins;
 }
 .logo {
   width: auto;
@@ -22,7 +22,6 @@ nav {
   height: 5.5vw;
   width: 100%;
   z-index: 100;
-  /* position: fixed; */
 }
 label.logo {
   color: white;
@@ -63,6 +62,7 @@ nav ul li a {
   justify-content: center;
   align-items: center;
   margin-left: 40px;
+  cursor: pointer;
 }
 a.active,
 a:hover {
@@ -135,7 +135,7 @@ a:hover {
   padding-right: 1vw;
 }
 .buyLogo {
-  background-image: url("/home/images/buylogo.svg");
+  background-image: url("/home/images/api.svg");
   background-repeat: no-repeat;
   background-size: contain;
   width: 1.5vw;
@@ -161,21 +161,88 @@ a:hover {
 .invisible {
   display: none;
 }
-
 .pmuBanner {
   margin-left: 0;
   display: flex;
+  flex-direction: row;
   width: 100%;
-  height: 100%;
+  height: 42vw;
+  z-index: 1;
+  position: relative;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
 }
-
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.pmuTextBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: -30vw;
+}
+.pmuText {
+  color: white;
+  font-size: 4vw;
+  font-family: poppins;
+  position: relative;
+  z-index: 2;
+  width: 40%;
+  margin-left: 8vw;
+}
+.pmuProduct {
+  display: flex;
+  z-index: 3;
+  background-image: url("/home/images/product.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 44.1%;
+  height: 35vw;
+  margin-left: 50vw;
+  margin-top: -31.5vw;
+}
 .learnMore {
   display: flex;
-  margin-top: -16vw;
-  margin-left: 18%;
+  color: white;
+  font-family: poppins;
+  font-size: 2vw;
+  margin-left: 16%;
+  margin-top: 4%;
   width: 15%;
   height: 20%;
   z-index: 2;
+}
+.learnMorePijltje {
+  background-image: url("/home/images/learnMorePijltje.png");
+  position: relative;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 2.1%;
+  height: 2.42vw;
+  margin-left: 20.6%;
+  animation: learnMorePijltje 3s infinite;
+  cursor: pointer;
+}
+@keyframes learnMorePijltje {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .whyPmu {
   background-color: #f6f6f6;
@@ -272,6 +339,19 @@ a:hover {
   margin-left: 10%;
   margin-right: 10%;
 }
+.accesTextBig {
+  font-size: 2.8vw;
+  margin-left: 10%;
+  margin-top: 10%;
+  margin-right: 10%;
+}
+
+.accesText {
+  font-size: 1.4vw;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 .appExample {
   margin-top: 10%;
   margin-left: 12%;
@@ -361,7 +441,7 @@ a:hover {
   font-size: 1.15vw;
 }
 .bottomColumnImg {
-  background-image: url("/home/images/Pmu-logo.webp");
+  background-image: url("/home/images/Pmu-logo.png");
   background-repeat: no-repeat;
   background-size: contain;
   width: 5vw;
@@ -377,7 +457,6 @@ a:hover {
 .menuGroups {
   display: flex;
   flex-direction: row;
-  color: white;
 }
 .featherIconsBottom {
   background-repeat: no-repeat;
@@ -396,8 +475,14 @@ a:hover {
   margin-top: 2%;
   font-size: 1.15vw;
 }
+.size {
+  font-size: 1.6vw;
+}
+.exampleSize {
+  width: 40%;
+}
 
-/*    ----------------------------------------------------------*/
+/*    ---------------------------------------------------------------------------------------------*/
 
 @media (max-width: 1024px) {
   .checkbtn {
@@ -408,7 +493,7 @@ a:hover {
     width: 100%;
     height: 100vh;
     background: #2c3e50;
-    top: 80px;
+    top: 5.5vw;
     left: -100%;
     text-align: center;
     transition: all 0.5s;
@@ -466,5 +551,283 @@ a:hover {
   }
   .dashboardLi {
     display: none;
+  }
+}
+
+@media (max-width: 650px) {
+  html {
+    max-width: 650px;
+  }
+  body {
+    max-width: 650px;
+  }
+  .whyPmuBalk {
+    flex-direction: column;
+    margin-top: 20vw;
+  }
+  .pmuBanner {
+    flex-direction: column;
+    width: 100%;
+    height: 100vw;
+    align-content: center;
+  }
+  .pmuTextBox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: -39vw;
+    width: 100%;
+    line-height: 8vw;
+  }
+  .pmuText {
+    font-size: 7vw;
+    margin-left: 0;
+    width: 80%;
+  }
+  .pmuProduct {
+    position: relative;
+    width: 62.1%;
+    height: 49vw;
+    margin-left: 0;
+    margin-top: -90vw;
+  }
+  .learnMore {
+    font-size: 5.5vw;
+    margin-left: 0;
+    margin-top: 3vw;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    display: flex;
+  }
+  .learnMorePijltje {
+    width: 4.1%;
+    height: 4.8vw;
+    margin-left: 0;
+  }
+  .bannerDiv {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+  .whyPmu {
+    margin-top: 42vw;
+    background-color: #f6f6f6;
+    width: 100%;
+    height: auto;
+    padding-bottom: 7vw;
+    justify-content: center;
+    align-items: center;
+  }
+  .whyPmuBalk {
+    display: flex;
+    margin-top: 0vw;
+    align-items: center;
+  }
+  .whyPmuBlok {
+    flex-direction: row;
+    margin-top: 5vw;
+    width: 90vw;
+    height: 30vw;
+  }
+  .pmuApp {
+    width: 94vw;
+    height: 93%;
+    margin-top: 0%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .whyPmuCirkel {
+    width: 7vw;
+    z-index: 2;
+    margin-right: -3.5vw;
+  }
+  .ondervlakText {
+    padding-top: 2vw;
+  }
+  .ondervlak {
+    height: 28vw;
+    width: 125%;
+  }
+  .blokTextBold {
+    font-size: 3.5vw;
+  }
+  .blokText {
+    font-size: 3vw;
+    line-height: 3.5vw;
+    margin-top: 4%;
+  }
+  .insides {
+    width: 100%;
+    height: 130vw;
+    flex-direction: column;
+    padding-bottom: 3vw;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .insidesTextBig {
+    font-size: 5vw;
+    margin-left: 0;
+    margin-top: -25vw;
+    transform: translateY(-7vw);
+    margin-right: 0;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .accesTextBig {
+    font-size: 5vw;
+    margin-left: 0;
+    margin-top: -39vw;
+    margin-right: 0;
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
+  .insidesText {
+    font-size: 3.4vw;
+    transform: translateY(50vw);
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .accesText {
+    font-size: 3.4vw;
+    transform: translateY(45vw);
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+  .appExample {
+    margin-top: -30vw;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translateY(-20vw);
+    z-index: 2;
+  }
+  .anywhere {
+    width: 100%;
+    height: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -7vw;
+  }
+  .vrouwOpAuto {
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    width: 80%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    transform: translateY(14vw);
+  }
+  .margins {
+    margin-top: -20vw;
+  }
+  nav {
+    height: 14vw;
+  }
+  .checkbtn {
+    font-size: 8.2vw;
+    line-height: 15vw;
+  }
+  ul {
+    top: 13.5vw;
+  }
+  .getStarted {
+    height: 14vw;
+  }
+  .getStartedText {
+    font-size: 3.5vw;
+    white-space: nowrap;
+  }
+  .getStartedButton {
+    margin-left: 10%;
+    font-size: 2.2vw;
+  }
+  .bottomBar {
+    background-color: #34495e;
+    width: 100%;
+    height: 120vw;
+  }
+  .bottomUpperRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .bottomColumn1 {
+    display: flex;
+    width: auto;
+    margin-top: 4vw;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .bottomColumn1Text {
+    font-size: 4.5vw;
+  }
+
+  .bottomColumn2 {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 4vw;
+    color: white;
+    font-family: poppins;
+    font-size: 4vw;
+    margin-left: 0;
+    align-items: center;
+  }
+  .bottomColumn3 {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 4vw;
+    color: white;
+    font-family: poppins;
+    font-size: 4vw;
+  }
+  .size {
+    font-size: 4vw;
+  }
+  .bottomColumnImg {
+    background-image: url("/home/images/Pmu-logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 8vw;
+    height: 8vw;
+    margin-right: 0;
+    margin-top: 2%;
+  }
+  .menuGroups {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+  }
+  .featherIconsBottom {
+    background-repeat: no-repeat;
+    height: 4vw;
+    width: 4vw;
+    background-size: contain;
+    margin-right: 5px;
+    margin-top: 1.5%;
+    color: white;
+  }
+  .bottomLowerRow {
+    font-size: 2vw;
+  }
+  .exampleSize {
+    width: 60%;
   }
 }

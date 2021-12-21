@@ -3,38 +3,37 @@ const { promisify } = require("util");
 const User = require("./userModel");
 const throwError = require("../utils/throwError");
 
+const replyToken = function (user, status, res) {
+  const id = user._id;
+  const token = jwt.sign({ id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_EXPIRES,
+  });
+
+  res.status(status).json({
+    status: "succes",
+    token,
+    data: {
+      user,
+    },
+  });
+};
+
 class AuthController {
-  replyToken(user, status, res) {
-    const id = user._id;
-    const token = jwt.sign({ id }, process.env.JWT_SECRET, {
-      expiresIn: process.env.JWT_EXPIRES,
-    });
-
-    res.status(status).json({
-      status: "succes",
-      token,
-      data: {
-        user,
-      },
-    });
-  }
-
   async login(req, res) {
-    try {
-      const { email, password } = req.body;
-      if (!email || !password) {
-        throw new Error("Please provide an email and password!");
-      }
-      const user = await User.findOne({ email }).select("+password");
-
-      if (!user || !(await user.correctPassword(password, user.password))) {
-        return throwError("Username or password is incorrect!", 401, res);
-      }
-
-      this.replyToken(user, 200, res);
-    } catch (err) {
-      throwError(err.message, 400, res);
+    // try {
+    const { email, password } = req.body;
+    if (!email || !password) {
+      throw new Error("Please provide an email and password!");
     }
+    const user = await User.findOne({ email }).select("+password");
+
+    if (!user || !(await user.correctPassword(password, user.password))) {
+      return throwError("Username or password is incorrect!", 401, res);
+    }
+    replyToken(user, 200, res);
+    // } catch (err) {
+    //   throwError(err.message, 400, res);
+    // }
   }
 
   async signup(req, res) {
@@ -50,7 +49,7 @@ class AuthController {
 
       const newUser = await User.create(userObject);
 
-      this.replyToken(newUser, 201, res);
+      replyToken(newUser, 201, res);
     } catch (error) {
       throwError(error.message, 400, res);
     }
@@ -119,45 +118,6 @@ class AuthController {
         status: "ok",
         data: {
           devices: user.devices,
-        },
-      });
-    } catch (error) {
-      throwError(error.message, 400, res);
-    }
-  }
-
-  async changeprice(req, res) {
-    try {
-      if (!req.body.energyprice) {
-        return throwError("No energy price", 400, res);
-      }
-      let token;
-
-      if (
-        req.headers.authorization &&
-        req.headers.authorization.startsWith("Bearer")
-      ) {
-        token = req.headers.authorization.split(" ")[1];
-      } else {
-        return throwError("No token", 401, res);
-      }
-
-      const decoded = await promisify(jwt.verify)(
-        token,
-        process.env.JWT_SECRET
-      );
-
-      await User.findByIdAndUpdate(
-        decoded.id,
-        {
-          energyprice: req.body.energyprice,
-        },
-        { runValidators: false, new: true }
-      );
-      res.status(200).json({
-        status: "ok",
-        data: {
-          energyprice: req.body.energyprice,
         },
       });
     } catch (error) {

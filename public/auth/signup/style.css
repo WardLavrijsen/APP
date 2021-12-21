@@ -239,3 +239,19 @@ p {
     font-size: 18px;
   }
 }
+
+.messagebox {
+  background-color: rgba(255, 0, 0, 0.647);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  border-radius: 10px;
+  font-size: 70%;
+  padding: 15px 40px;
+  display: none;
+  text-align: center;
+  animation: oppacity 0.4s linear;
+  margin-bottom: 40px;
+}

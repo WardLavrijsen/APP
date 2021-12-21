@@ -24,7 +24,7 @@ LoginButton.addEventListener("click", async (i) => {
     console.log(data);
     if (data.status === "succes") {
       localStorage.setItem("authtoken", data.token);
-      window.location.href = "/";
+      window.location.href = "/dashboard";
     } else {
       messagebox.style.display = "block";
       messagebox.style.backgroundColor = "#e74c3c";
@@ -53,6 +53,6 @@ passwordEye.addEventListener("click", () => {
 
 (function () {
   if (localStorage.getItem("authtoken")) {
-    window.location.href = "/";
+    window.location.href = "/dashboard";
   }
 })();

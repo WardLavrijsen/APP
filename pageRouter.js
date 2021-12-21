@@ -3,11 +3,6 @@ const path = require("path");
 
 const router = express.Router();
 
-const fs = require("fs");
-
-const jsonread = fs.readFileSync("./test.json");
-const jsondata = JSON.parse(jsonread);
-
 router.route("/");
 
 router
@@ -46,18 +41,16 @@ router
     res.sendFile(path.join(__dirname, "public/aboutUs/index.html"))
   );
 
-router
-  .route("/dashboard")
-  .get((req, res) =>
-    res.sendFile(path.join(__dirname, "public/dashboard/index.html"))
-  );
+// router
+//   .route("/dashboard")
+//   .get((req, res) =>
+//     res.sendFile(path.join(__dirname, "public/dashboard/index.html"))
+//   );
 
 router
   .route("/manual")
   .get((req, res) =>
     res.sendFile(path.join(__dirname, "public/manual/index.html"))
   );
-
-router.route("/testdata").get((req, res) => res.status(200).json(jsondata));
 
 module.exports = router;

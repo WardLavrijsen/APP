@@ -121,3 +121,113 @@
   margin-left: 1.6vw;
   margin-top: 1.5vw;
 }
+.secondBoxInStep {
+  display: flex;
+  margin-top: 2vw;
+}
+.secondBoxInStep2 {
+  display: flex;
+  margin-top: 2vw;
+}
+.step2Style {
+  display: flex;
+}
+.step3Style {
+  display: flex;
+  flex-direction: row;
+}
+
+@media (max-width: 650px) {
+  .secondBoxInStep {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 4vw;
+  }
+  .secondBoxInStep2 {
+    flex-direction: column;
+    margin: 0;
+    align-items: center;
+    text-align: center;
+  }
+  .downloadPMUCard {
+    height: auto;
+  }
+  .step1Card {
+    font-size: 5vw;
+  }
+  .PMUApp {
+    width: 40vw;
+    height: 26vw;
+    margin: 0;
+    display: flex;
+    margin-top: 3vw;
+  }
+  .step1Text {
+    margin-top: 4vw;
+    padding-bottom: 4vw;
+    font-size: 3vw;
+    max-width: 90%;
+  }
+  .step2Header {
+    font-size: 5vw;
+    text-align: center;
+  }
+  .step2Card {
+    height: auto;
+  }
+  .loginScreen {
+    width: 31vw;
+    height: 60vw;
+    margin-left: 0;
+  }
+  .registerScreen {
+    width: 31vw;
+    height: 60vw;
+  }
+  .step2Text {
+    font-size: 3vw;
+    max-width: 90%;
+  }
+  .step3Card {
+    height: auto;
+    margin-top: 5vw;
+  }
+  .plusSquare {
+    width: 3vw;
+    height: 3vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .step3Paragraph {
+    display: flex;
+  }
+  .step3Style {
+    justify-content: center;
+  }
+  .addDeviceScreen {
+    width: 32.5vw;
+    height: 60vw;
+  }
+  .dashboardScreen {
+    width: 31vw;
+    height: 60vw;
+    margin: 0;
+  }
+  .step2Style {
+    margin-top: 2vw;
+  }
+  .homeScreenwithDevice {
+    width: 33.5vw;
+    height: 64vw;
+    margin-top: -0.9vw;
+  }
+  .homeScreenwithOpenedDevice {
+    width: 31vw;
+    height: 60vw;
+  }
+  .step2Paragraph {
+    margin-right: 5%;
+  }
+}

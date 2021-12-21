@@ -45,10 +45,10 @@
                     </div>
             </a></li>
             
-            <li><a href="/testdata" class="invisible">
+            <li><a href="/api" class="invisible">
                     <div class="buyButton">  
                         <div class="buyLogo"></div>
-                        <div class="buyButtonText">Buy now</div>
+                        <div class="buyButtonText">API</div>
                     </div>
             </a></li>
 
@@ -59,10 +59,10 @@
                         </div>
                 </a></li>
                 
-                <li class="buyLi"><a href="/testdata">
+                <li class="buyLi"><a href="/api">
                         <div class="buyButton">  
                             <div class="buyLogo"></div>
-                            <div class="buyButtonText">Buy now</div>
+                            <div class="buyButtonText">API</div>
                         </div>
                 </a></li>
             </ul>
@@ -72,7 +72,7 @@
             <div class="step1Card">
                 <div style="display: flex; text-align: center;">Step 1: Download the PMU app</div>
             </div>
-            <div style="display: flex;">
+            <div class="secondBoxInStep">
                 <div class="PMUApp"></div>
                 <div class="step1Text">Download the PMU app, for Apple devices available in the App store. For Android devices available in the Google Play store.</div>
             </div>
@@ -80,9 +80,11 @@
 
         <div class="step2Card">
             <div class="step2Header">Step 2: Run the app and create an account</div>
-            <div style="display: flex; margin-top: 2vw;">
-                <div class="loginScreen"></div>
-                <div class="registerScreen"></div>
+            <div class="secondBoxInStep2">
+                <div class="step2Style">
+                    <div class="loginScreen"></div>
+                    <div class="registerScreen"></div>
+                </div>
                 <div class="step2Text">
                     <p class="step2Paragraph">Press the Don’t have an account?<strong> Register Now </strong>button on the bottom of the Login page.</p>
                     <p class="step2Paragraph">Now you are getting redirected to the <strong>Register</strong> page.</p>
@@ -94,11 +96,13 @@
         
         <div class="step3Card">
             <div class="step2Header">Step 3: Add your first device</div>
-            <div style="display: flex; margin-top: 2vw;">
-                <div class="dashboardScreen"></div>
-                <div class="addDeviceScreen"></div>
+            <div class="secondBoxInStep">
+                <div class="step2Style">
+                    <div class="dashboardScreen"></div>
+                    <div class="addDeviceScreen"></div>
+                </div>
                 <div class="step2Text">
-                    <div style="display: flex; flex-direction: row">
+                    <div class="step3Style">
                         <p class="step3Paragraph">Press the</p>
                             <div><div class="plusSquare"></div></div>
                             <p class="step3Paragraph"> icon on the home page in the</p>
@@ -113,9 +117,11 @@
 
         <div class="step2Card">
             <div class="step2Header">Step 4: Reading your power usage</div>
-            <div style="display: flex; margin-top: 2vw;">
-                <div class="homeScreenwithDevice"></div>
-                <div class="homeScreenwithOpenedDevice"></div>
+            <div class="secondBoxInStep">
+                <div class="step2Style">
+                    <div class="homeScreenwithDevice"></div>
+                    <div class="homeScreenwithOpenedDevice"></div>
+                </div>
                 <div class="step2Text" style="margin-left: 7vw;">
                     <p class="step2Paragraph">Your added devices will automatically be shown on te<strong> home</strong> page. </p>
                     <p class="step2Paragraph">On the right side of a device block you can see the current power usage in Watts.</p>
@@ -135,36 +141,36 @@
                     </div>
                     <div class="bottomColumn2">
                         <div>Menu:</div>
-                        <a href="/" class="menuGroups">
-                            <div style="background-image: url(./home/images/home.svg)" class="featherIconsBottom"></div>
+                        <a href="/" class="menuGroups" style="color: white;">
+                            <div style="background-image: url(/home/images/home.svg)" class="featherIconsBottom"></div>
                             <div>Home</div>
                         </a>
 
-                        <a href="/about" class="menuGroups">
-                            <div style="background-image: url(./home/images/about-us.svg)" class="featherIconsBottom"></div>
+                        <a href="/about" class="menuGroups" style="color: white;">
+                            <div style="background-image: url(/home/images/about-us.svg)" class="featherIconsBottom"></div>
                             <div>About us</div>
                         </a>
 
-                        <a href="/manual" class="menuGroups">
-                            <div style="background-image: url(./home/images/manual.svg)" class="featherIconsBottom"></div>
+                        <a href="/manual" class="menuGroups" style="color: white;">
+                            <div style="background-image: url(/home/images/manual.svg)" class="featherIconsBottom"></div>
                             <div>Manual</div>
                         </a>
 
-                        <a href="/login" class="menuGroups">
-                            <div style="background-image: url(./home/images/graph2.svg)" class="featherIconsBottom"></div>
+                        <a href="/login" class="menuGroups" style="color: white;">
+                            <div style="background-image: url(/home/images/graph2.svg)" class="featherIconsBottom"></div>
                             <div>Dashboard</div>
                         </a>
 
-                        <a href="/testdata" class="menuGroups">
-                            <div style="background-image: url(./home/images/buylogo.svg)" class="featherIconsBottom"></div>
-                            <div>Buy PMU</div>
+                        <a href="/api" class="menuGroups" style="color: white;">
+                            <div style="background-image: url(/home/images/api.svg)" class="featherIconsBottom"></div>
+                            <div>API</div>
                         </a>
 
 
 
                     </div>
                     <div class="bottomColumn3">
-                        <div style="font-size: 1.6vw;">Contact information:</div>
+                        <div class="size">Contact information:</div>
                         <div style="color: #34495E;">.</div>
                         <div>E-mail:   Info@pmu.nl</div>
                         <div>Phone-Number: +31 6 12345678</div>

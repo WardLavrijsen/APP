@@ -11,6 +11,7 @@ const cors = require("cors");
 const app = express();
 const apiRouter = require("./apiRouter");
 const pageRouter = require("./pageRouter");
+const changeRouter = require("./changes/changeRouter");
 
 dotenv.config({ path: "./config.env" });
 
@@ -34,7 +35,19 @@ mongoose
   .then(() => console.log("Database connected succesfull!"));
 
 app.use("/api", apiRouter);
+app.use("/api/change", changeRouter);
 app.use("/", pageRouter);
+
+app.use(express.static(path.resolve(__dirname, "public/dashboard")));
+
+app.get("/dashboard", (req, res) => {
+  res
+    .set(
+      "Content-Security-Policy",
+      "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
+    )
+    .sendFile(path.join(__dirname, "public/dashboard", "index.html"));
+});
 
 // HTTPS Options
 // const options = {

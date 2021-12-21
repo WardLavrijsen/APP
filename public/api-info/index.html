@@ -97,24 +97,6 @@
         </td>
       </tr>
       <tr>
-        <td>Change Energy Price</td>
-        <td>PATCH</td>
-        <td>/changeprice</td>
-        <td>energyprice</td>
-        <td>authorization: Bearer {token}</td>
-        <td>Token, User</td>
-        <td class="logotd">
-          <a href="#" data-link="/api/changeprice" class="copybutton"
-            ><img data-link="/api/changeprice" src="./api-info/clipboard.svg"
-          /></a>
-        </td>
-        <td class="logotd">
-          <a href="#" data-link="/api/changeprice" class="copybuttonfull"
-            ><img data-link="/api/changeprice" src="./api-info/clipboard.svg"
-          /></a>
-        </td>
-      </tr>
-      <tr>
         <td>Add Device To A User</td>
         <td>POST</td>
         <td>/adddevice</td>
@@ -147,6 +129,146 @@
         <td class="logotd">
           <a href="#" data-link="/api/adddata" class="copybuttonfull"
             ><img data-link="/api/adddata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Change Data</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>API Endpoint</th>
+        <th>Body</th>
+        <th>Headers</th>
+        <th>Response</th>
+        <th>Link</th>
+        <th>Full</th>
+      </tr>
+      <tr>
+        <td>Change Energy Price</td>
+        <td>PATCH</td>
+        <td>/change/energyprice</td>
+        <td>energyprice</td>
+        <td>authorization: Bearer {token}</td>
+        <td>change</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/energyprice" class="copybutton"
+            ><img
+              data-link="/api/change/energyprice"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/energyprice" class="copybuttonfull"
+            ><img
+              data-link="/api/change/energyprice"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Change Email</td>
+        <td>PATCH</td>
+        <td>/change/email</td>
+        <td>email</td>
+        <td>authorization: Bearer {token}</td>
+        <td>change</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/email" class="copybutton"
+            ><img data-link="/api/change/email" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/email" class="copybuttonfull"
+            ><img data-link="/api/change/email" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Change Postal Code</td>
+        <td>PATCH</td>
+        <td>/change/postalcode</td>
+        <td>postalcode</td>
+        <td>authorization: Bearer {token}</td>
+        <td>change</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/postalcode" class="copybutton"
+            ><img
+              data-link="/api/change/postalcode"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/postalcode" class="copybuttonfull"
+            ><img
+              data-link="/api/change/postalcode"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Delete</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>API Endpoint</th>
+        <th>Body</th>
+        <th>Headers</th>
+        <th>Response</th>
+        <th>Link</th>
+        <th>Full</th>
+      </tr>
+      <tr>
+        <td>Delete Account</td>
+        <td>DELETE</td>
+        <td>/change/deleteaccount</td>
+        <td>None</td>
+        <td>authorization: Bearer {token}</td>
+        <td>confirmation</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/deleteaccount" class="copybutton"
+            ><img
+              data-link="/api/change/deleteaccount"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a
+            href="#"
+            data-link="/api/change/deleteaccount"
+            class="copybuttonfull"
+            ><img
+              data-link="/api/change/deleteaccount"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Delete Device</td>
+        <td>DELETE</td>
+        <td>/change/deletedevice</td>
+        <td>id</td>
+        <td>authorization: Bearer {token}</td>
+        <td>deleted device</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/change/deletedevice" class="copybutton"
+            ><img
+              data-link="/api/change/deletedevice"
+              src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a
+            href="#"
+            data-link="/api/change/deletedevice"
+            class="copybuttonfull"
+            ><img
+              data-link="/api/change/deletedevice"
+              src="./api-info/clipboard.svg"
           /></a>
         </td>
       </tr>
