@@ -1,6 +1,7 @@
 const crypto = require("crypto");
 
 const throwError = require("./utils/throwError");
+const Requests = require("./utils/Requests");
 const User = require("./users/userModel");
 
 const sendEmail = require("./utils/email");
@@ -26,7 +27,7 @@ exports.sendReset = async function (req, res) {
         email: currentuser.email,
         message: resetLink,
       });
-
+      Requests.succesRequest = 4;
       res.status(200).json({
         status: "ok",
         message: "token send to email",
@@ -63,7 +64,9 @@ exports.resetToken = async function (req, res) {
       passwordResetToken: hashToken,
       passwordResetExpires: { $gt: Date.now() },
     });
-    if (!user) return throwError("token is invalid or has expired!", 400, res);
+    if (!user) {
+      return throwError("token is invalid or has expired!", 400, res);
+    }
 
     user.password = req.body.password;
     user.passwordConfirm = req.body.passwordConfirm;
@@ -71,6 +74,7 @@ exports.resetToken = async function (req, res) {
     user.passwordResetToken = undefined;
     await user.save();
 
+    Requests.succesRequest = 3;
     res.status(200).json({
       status: "ok",
       message: "password succesfully resetted",

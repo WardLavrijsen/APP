@@ -2,6 +2,7 @@ const { promisify } = require("util");
 const jwt = require("jsonwebtoken");
 const throwError = require("./utils/throwError");
 const User = require("./users/userModel");
+const Requests = require("./utils/Requests");
 
 class Raspberry {
   async addData(req, res) {
@@ -42,6 +43,7 @@ class Raspberry {
       user.markModified("devices");
       await user.save({ validateBeforeSave: false, new: true });
 
+      Requests.succesRequest = 2;
       res.status(200).json({
         status: "ok",
         dataAdded: {
@@ -75,6 +77,7 @@ class Raspberry {
 
       if (!currentUser) return throwError("User doesn't exsists", 401, res);
 
+      Requests.succesRequest = 2;
       res.status(200).json({
         status: "ok",
         data: {
@@ -107,6 +110,7 @@ class Raspberry {
 
       const index = user.devices.findIndex((device) => device.id === id);
 
+      Requests.succesRequest = 1;
       res.status(200).json({
         status: "ok",
         powerstatus: user.devices[index].relaypower,

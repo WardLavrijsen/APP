@@ -2,38 +2,40 @@ const jwt = require("jsonwebtoken");
 const { promisify } = require("util");
 const User = require("./userModel");
 const throwError = require("../utils/throwError");
-
-const replyToken = function (user, status, res) {
-  const id = user._id;
-  const token = jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRES,
-  });
-
-  res.status(status).json({
-    status: "succes",
-    token,
-    data: {
-      user,
-    },
-  });
-};
+const Requests = require("../utils/Requests");
 
 class AuthController {
-  async login(req, res) {
-    // try {
-    const { email, password } = req.body;
-    if (!email || !password) {
-      throw new Error("Please provide an email and password!");
-    }
-    const user = await User.findOne({ email }).select("+password");
+  replyToken(user, status, res) {
+    const id = user._id;
+    const token = jwt.sign({ id }, process.env.JWT_SECRET, {
+      expiresIn: process.env.JWT_EXPIRES,
+    });
 
-    if (!user || !(await user.correctPassword(password, user.password))) {
-      return throwError("Username or password is incorrect!", 401, res);
+    res.status(status).json({
+      status: "succes",
+      token,
+      data: {
+        user,
+      },
+    });
+  }
+
+  async login(req, res) {
+    try {
+      const { email, password } = req.body;
+      if (!email || !password) {
+        throw new Error("Please provide an email and password!");
+      }
+      const user = await User.findOne({ email }).select("+password");
+
+      if (!user || !(await user.correctPassword(password, user.password))) {
+        return throwError("Username or password is incorrect!", 401, res);
+      }
+      Requests.succesRequest = 1;
+      this.replyToken(user, 200, res);
+    } catch (err) {
+      throwError(err.message, 400, res);
     }
-    replyToken(user, 200, res);
-    // } catch (err) {
-    //   throwError(err.message, 400, res);
-    // }
   }
 
   async signup(req, res) {
@@ -48,8 +50,8 @@ class AuthController {
       if (req.body.energyprice) userObject.energyprice = req.body.energyprice;
 
       const newUser = await User.create(userObject);
-
-      replyToken(newUser, 201, res);
+      Requests.succesRequest = 1;
+      this.replyToken(newUser, 201, res);
     } catch (error) {
       throwError(error.message, 400, res);
     }
@@ -114,6 +116,7 @@ class AuthController {
         { runValidators: false, new: true }
       );
 
+      Requests.succesRequest = 3;
       res.status(200).json({
         status: "ok",
         data: {

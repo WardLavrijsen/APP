@@ -12,6 +12,7 @@ const app = express();
 const apiRouter = require("./apiRouter");
 const pageRouter = require("./pageRouter");
 const changeRouter = require("./changes/changeRouter");
+const requestController = require("./utils/requestController");
 
 dotenv.config({ path: "./config.env" });
 
@@ -36,6 +37,7 @@ mongoose
 
 app.use("/api", apiRouter);
 app.use("/api/change", changeRouter);
+app.use("/api/insides", requestController);
 app.use("/", pageRouter);
 
 app.use(express.static(path.resolve(__dirname, "public/dashboard")));
@@ -47,6 +49,10 @@ app.get("/dashboard", (req, res) => {
       "default-src *; style-src 'self' http://* 'unsafe-inline'; script-src 'self' http://* 'unsafe-inline' 'unsafe-eval'"
     )
     .sendFile(path.join(__dirname, "public/dashboard", "index.html"));
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "public/error", "index.html"));
 });
 
 // HTTPS Options
