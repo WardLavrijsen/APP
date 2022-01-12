@@ -200,6 +200,17 @@ p {
     opacity: 1;
   }
 }
+
+.dummydatabox {
+  background-color: #fff;
+  position: absolute;
+  top: 100%;
+  transform: translateY(-100%);
+  left: 0;
+  height: 50px;
+  width: 50px;
+}
+
 @media only screen and (max-width: 1024px) {
   * {
     font-size: 26px;

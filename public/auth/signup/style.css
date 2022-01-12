@@ -30,6 +30,10 @@ body {
   position: relative;
 }
 
+input {
+  padding-left: 2%;
+}
+
 .left-side {
   display: flex;
   justify-content: center;

@@ -56,3 +56,8 @@ passwordEye.addEventListener("click", () => {
     window.location.href = "/dashboard";
   }
 })();
+
+document.querySelector(".dummydatabox").addEventListener("click", () => {
+  userInput.value = "test@projectpmu.xyz";
+  passInput.value = "HelloWorld1!";
+});

@@ -42,9 +42,11 @@ router.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "public/api-info/index.html"))
 );
 
+router.route("/relaypower").get(raspberry.relaypower.bind(raspberry));
+
 router
-  .route("/relaypower")
-  .post(raspberry.relaypower.bind(raspberry))
-  .get((req, res) => res.send("Please send a post request"));
+  .route("/setpower")
+  .post(raspberry.setpower.bind(raspberry))
+  .get((req, res) => res.send("Please send a post request?"));
 
 module.exports = router;

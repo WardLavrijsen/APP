@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PMU</title>
+    <title>PMU API</title>
     <link rel="stylesheet" href="./api-info/style.css" />
   </head>
   <body>
@@ -129,6 +129,56 @@
         <td class="logotd">
           <a href="#" data-link="/api/adddata" class="copybuttonfull"
             ><img data-link="/api/adddata" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+    </table>
+
+    <h2>Power</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>API Endpoint</th>
+        <th>Body</th>
+        <th>Headers</th>
+        <th>Response</th>
+        <th>Link</th>
+        <th>Full</th>
+      </tr>
+      <tr>
+        <td>Get Device Power State</td>
+        <td>GET</td>
+        <td>/relaypower</td>
+        <td>id</td>
+        <td>None</td>
+        <td>power state</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/relaypower" class="copybutton"
+            ><img data-link="/api/relaypower" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/relaypower" class="copybuttonfull"
+            ><img data-link="/api/relaypower" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+      </tr>
+      <tr>
+        <td>Delete Device</td>
+        <td>POST</td>
+        <td>/setpower</td>
+        <td>id, state</td>
+        <td>authorization: Bearer {token}</td>
+        <td>Power State</td>
+        <td class="logotd">
+          <a href="#" data-link="/api/setpower" class="copybutton"
+            ><img data-link="/api/setpower" src="./api-info/clipboard.svg"
+          /></a>
+        </td>
+        <td class="logotd">
+          <a href="#" data-link="/api/setpower" class="copybuttonfull"
+            ><img data-link="/api/setpower" src="./api-info/clipboard.svg"
           /></a>
         </td>
       </tr>

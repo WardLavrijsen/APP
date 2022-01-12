@@ -353,7 +353,7 @@ a:hover {
   margin-right: 10%;
 }
 .appExample {
-  margin-top: 10%;
+  margin-top: 17%;
   margin-left: 12%;
   margin-right: 5%;
   width: 70%;
@@ -368,7 +368,7 @@ a:hover {
   font-family: poppins;
 }
 .vrouwOpAuto {
-  margin-top: 10%;
+  margin-top: 13%;
   margin-left: 17%;
   margin-right: 5%;
   width: 70%;
@@ -402,6 +402,9 @@ a:hover {
   font-family: poppins;
   font-size: 1.7vw;
   margin-left: 25%;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: none;
 }
 
 .bottomBar {
@@ -480,6 +483,10 @@ a:hover {
 }
 .exampleSize {
   width: 40%;
+}
+
+.getStartedButton:hover {
+  background-color: #d5d5d5;
 }
 
 /*    ---------------------------------------------------------------------------------------------*/
